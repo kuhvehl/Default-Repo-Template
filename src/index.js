@@ -1,13 +1,9 @@
 import './style.css';
-import { updateDisplay } from './display';
-import { getFromLocalStorage } from './localStorage';
-import { addListeners } from './listeners';
 
-export const projectsStart = getFromLocalStorage()
+console.log('testing');
 
-if (projectsStart.getProjects().length > 0) {
-updateDisplay(projectsStart.getProjects(), 0);
-} else {
-    addListeners();
-}
-
+if (process.env.NODE_ENV !== 'production') {
+    console.log('Looks like we are in development mode!');
+  } else if (process.env.NODE_ENV === 'production') {
+    console.log('Looks like we are in production mode!')
+  }
