@@ -1,10 +1,10 @@
 // eslint-disable-next-line no-undef
-const { merge } = require('webpack-merge');
+const { merge } = require("webpack-merge");
 // eslint-disable-next-line no-undef
-const common = require('./webpack.common.js');
+const common = require("./webpack.common.js");
 
 // eslint-disable-next-line no-undef
 module.exports = merge(common, {
-    mode: 'production',
-    devtool: 'source-map',
-  });
+  mode: "production",
+  devtool: "source-map",
+});
